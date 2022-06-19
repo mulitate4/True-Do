@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="./static/images/icons/favicon.ico">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+    <link href="./static/css/base.css" rel="stylesheet">
+    <link href="./static/css/app.css" rel="stylesheet">
+    
+
+    <title>True Do</title>
+</head>
+
+
+<!-- TODO - Add all the menus directly here -->
+<!-- TODO - Change the way settings menu works -->
+<body>
+    <div class="backgroundAppDiv">
+        <div class="filterDiv">
+
+            <div class="settings">
+                <div class="clickDiv"></div>
+
+                <div class="settingsDialog">
+                    <a class="logoutButton">Log Out</a>
+                    <a class="changePassword">Change Password</a>
+                    <a class="changeBackground">Change Background</a>
+                    <a class="resetBackground">Reset Background</a>
+                </div>
+                
+                <div class="changePasswordDiv">
+                    <div class="flexVisibility">
+                        <input type="password" placeholder="Enter New Password" class="passwordInputs passwordInput">
+                        <i id="togglePassword" class="far fa-eye margin"></i>
+                    </div>
+
+                    <div class="flexVisibility">
+                        <input type="password" placeholder="Confirm New Password" class="passwordInputs confirmPasswordInput">
+                        <i id="togglePasswordConfirm" class="far fa-eye margin"></i>
+                    </div>
+
+                    <button name="changeButton" class="changePassButton">Change</button>
+                </div>
+
+                <div class="changeBackgroundDiv">
+                    <input placeholder="Image URL" class="bgInput">
+                    <button name="changeButton" class="changeButton">Change</button>
+                </div>
+
+            </div > <!-- /settings -->
+
+            <div class="todoDiv">
+            </div>
+
+            <div class="insertItemDiv">
+                <div class="flexFixDiv">
+                    <input type="input" name="insertItemInput" class="insertItemInput" placeholder="Add your To-Do"> 
+                </div>
+                <button class="insertItemButton">✓</button>
+                <button class="settingsButton"><i class="fas fa-cog"></i></button>
+            </div>
+
+            <div class="undo"></div>
+        </div>
+    </div>
+
+    <div class="error"></div>
+
+    <script type="module" src="./static/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,263 @@
+/* --------------------- */
+/* Pure Elements Section */
+/* --------------------- */
+*, html {padding:0; margin:0;}
+
+body {
+    color: white;
+    font-family: Comfortaa, cursive;
+    background-color: black;
+    max-height: 700px;
+
+    --green: #16C60C
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+h2 {
+    font-size: 1.7rem;
+}
+
+a {
+    -webkit-tap-highlight-color: transparent;
+    color: var(--green);
+    cursor: pointer;
+}
+
+button {
+    outline: none;
+    border: none;
+
+    background-color: transparent;
+
+    font-family: Comfortaa, cursive;
+    color: white;
+    font-size: 1rem;
+
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+}
+
+input {
+    outline: none;
+    border: none;
+    background-color: transparent;
+
+    color: white;
+    font-family: Comfortaa, cursive;
+}
+
+textarea {
+    outline: none;
+    border: none;
+    background-color: transparent;
+
+    color: white;
+    font-family: Comfortaa, cursive;
+}
+
+
+/* ---------------------------- */
+/* Autcomplete Ugliness Remover */
+/* ---------------------------- */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: white !important;
+}
+
+
+/* ----------------- */
+/* Scrollbar Section */
+/* ----------------- */
+::-webkit-scrollbar {
+    width: 15px;
+    height: 15px;
+}
+  
+  /* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+  
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, .5);
+}
+  
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, .7);
+}
+
+::-webkit-scrollbar-button {
+    background: white;
+}
+
+/* Buttons */
+::-webkit-scrollbar-button:single-button:horizontal {
+    background-color: transparent;
+    display: block;
+    border-style: solid;
+    height: 13px;
+    width: 16px;
+}
+
+/* No Vertical Buttons */
+::-webkit-scrollbar-button:single-button:vertical {
+    display: none;
+}
+
+/* Left Button */
+::-webkit-scrollbar-button:single-button:horizontal:decrement {
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent; 
+    border-left-color: transparent ;
+    border-right: 8px solid rgba(255, 255, 255, .1);
+}
+  
+::-webkit-scrollbar-button:single-button:horizontal:decrement:hover {
+    border-right: 8px solid rgba(255, 255, 255, .2);
+}
+
+/* Right Button */
+::-webkit-scrollbar-button:single-button:horizontal:increment {
+
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent; 
+    border-left: 8px solid rgba(255, 255, 255, .1);
+    border-right-color: transparent ;
+}
+
+::-webkit-scrollbar-button:single-button:horizontal:increment:hover {
+    border-left: 8px solid rgba(255, 255, 255, .2);
+}
+
+
+/* ------------ */
+/* Custom Alert */
+/* ------------ */
+.alertHr {
+    border: none;
+    border-bottom: 2px solid #777;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.alertDiv {
+
+    right: 0;
+    bottom: 0;
+    position: absolute;
+
+    margin-right: 40px;
+    margin-bottom: 100px;
+    
+    z-index: 100;
+
+    height: auto;
+    width: 270px;
+    background-color: #222;
+    border-radius: 5px;
+
+    animation: fadeIn 1s;
+}
+
+.alertH3 {
+    text-decoration: none;
+    font-size: 1.3rem;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.alertP {
+    font-size: 1rem;
+    margin-left: 10px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* ---- */
+/* Misc */
+/* ---- */
+.green {
+    color: var(--green);
+ }
+ 
+.animationDiv {
+    animation: slideIn .2s;
+}
+
+.deleting {
+    animation: swipeOut 1.1s;
+}
+
+.flex {
+    display: flex;
+}
+
+/* ---------- */
+/* Animations */
+/* ---------- */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut{
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes swipeOut {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(200px);
+        opacity: 0;
+    }
+}
+
+@keyframes fillHr {
+    0% {
+        border-top: 2px solid white;
+    }
+    100% {
+        border-top: 2px solid var(--green);
+    }
+}
+
+@keyframes unfillHr {
+    0% {
+        border-top: 2px solid var(--green);
+    }
+    100% {
+        border-top: 2px solid white;
+    }
+}

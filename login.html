@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="./static/images/icons/favicon.ico">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+    <link href="./static/css/base.css" rel="stylesheet">
+    <link href="./static/css/loginAndRegister.css" rel="stylesheet">
+
+    <title>True Do Login</title>
+</head>
+<body>
+    <div class="scaffold">
+        <div class="animationDiv">
+
+            <h1 class="heading">LOGIN</h1>
+
+            <div class="formContainerDiv">
+                <div class="inputContainer">
+                    <input type="input" name="email" class="emailInput" placeholder="Email"> <br>
+                </div>
+                <div class="flex inputContainer m-top-20">
+                    <input type="password" name="password" class="passwordInput" placeholder="Password"> 
+                    <i class="far fa-eye" id="togglePassword"></i>
+                </div>
+                <button class="loginButton">LOGIN</button> <i class="fas fa-circle-notch fa-spin" id="loadingIcon"></i>
+            </div>
+
+            <!-- <a href="forgot" class="hidden">Forgot Password?</a> -->
+            <p class="loginAndRegisterP">Don't have an <span class="green">account</span> yet? <a href="register.html">Register!</a></p>
+        </div>
+    </div>
+
+    <div class="error"></div>
+    
+    <script type="module" src="./static/js/loginAndRegister.js"></script>
+</body>
+</html>

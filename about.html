@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About True Do</title>
+
+    <link rel="icon" href="./static/images/favicon.ico">
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+
+    <link href="./static/css/base.css" rel="stylesheet">
+    <link href="./static/css/about.css" rel="stylesheet">
+</head>
+<body>
+    <div class="infoDiv">
+        <br>
+        <br>
+        <br>
+        <h2 class="questionH2">Who created True Do?</h2> <br>
+        <p><a href="https://github.com/mulitate4" target="_blank">Aryan Dongre</a> / <a href="https://github.com/mulitate4" target="_blank">Mulitate4</a></p>
+        <br>
+        <br>
+        <br>
+
+
+        <h2 class="questionH2">What is True Do?</h2> <br>
+        <p>True Do is a Simple <span class="green">{</span>Aesthetic and Zen<span class="green">}</span> To-Do app!</p>
+        <img src="./static/images/app-screenshot.png" alt="" height="500px" id="pc-img">
+        <img src="./static/images/app-screenshot-mobile.png" alt="" height="500px" id="mobile-img">
+        <br>
+        <br>
+        <br>
+
+
+        <h2>Why I built True Do</h2> 
+        <br>
+        <p>
+            True Do started as a <span class="green">passion project</span> to solve a <span class="green">simple problem</span> I had - 
+            A simple everyday To-Do app, which was <span class="green">clean</span>, <span class="green">easy to use</span> and <span class="green">pleasing</span> to look at!
+            I wanted to build <span class="green">True Do</span> as a commercial app to gain experience in building <span class="green">APIs</span> and <span class="green">Websites</span>.
+            This has been a very fun experience for me. I've learnt a lot as well as getting to know how APIs work. The API itself took around <span class="green">2 months</span> to make!
+            There were moments where I was banging my head against the wall, but then after taking a break, I would tackle the problem with a clear head.
+        </p> 
+        <br> 
+        <br>
+
+        <p>IT is a very simple app, but for me, that's the beauty of it - <span class="green">the simplicity!</span></p>
+
+        <div class="footerDiv">
+        </div>
+    </div>
+
+    <script>
+        document.querySelector("#pc-img").style.display = "";
+        document.querySelector("#mobile-img").style.display = "none";
+        
+        var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+        if (isMobile) {
+            document.querySelector("#pc-img").style.display = "none";
+            document.querySelector("#mobile-img").style.display = "";
+        };
+    </script>
+</body>
+</html>

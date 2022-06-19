@@ -1,0 +1,516 @@
+/* --------------------- */
+/* Pure Elements Section */
+/* --------------------- */
+body {
+    overflow: hidden;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p {
+    font-size: 1.2rem;
+}
+
+span {
+    outline: none;
+    border: none;
+    background-color: transparent;
+
+    color: white;
+    font-family: Comfortaa, cursive;
+}
+
+/* ------------------- */
+/* Background & Filter */
+/* ------------------- */
+.backgroundAppDiv {
+    height: 100vh;
+
+    background-image: url("../images/backgrounds/jungle_background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.filterDiv {
+    height: 100vh;
+    background-color: rgba(30,30,30,0.5);
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* ------------------- */
+/* .Todo Items Section */
+/* ------------------- */
+.todoDiv {
+    flex: 90;
+    padding: 20px 20px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    margin-top: 30vh;
+}
+
+.loading::after {
+    content: "";
+    width: 30px;
+    height: 30px;
+    border: 4.5px solid transparent;
+    border-top-color: white;
+    border-radius: 50%;
+
+    animation: loading 1s ease infinite;
+}
+
+@keyframes loading {
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+
+/* ---------------------- */
+/* Item Container Section */
+/* ---------------------- */
+.itemDiv {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.7);
+
+    margin-top: 1vh;
+    padding-left: 10px;
+    border-radius: 10px;
+
+    animation: slideIn .5s;
+}
+
+.replacing {
+    animation: none;
+}
+
+.checkBoxDiv {
+    padding-top: 10px;
+}
+
+.itemInputDiv {    
+    flex: 25;
+    width: 0;
+}
+
+.itemInput {
+    height: 40px;
+    width: 96%;
+
+    padding-left: 5px;
+
+    font-size: 1.3rem;
+}
+
+.itemInputSpan {
+    height: 40px;
+    width: 96%;
+
+    font-size: 1.3rem;
+}
+
+
+
+/* -------------------------- */
+/* Insert Item Bottom Section */
+/* -------------------------- */
+.insertItemDiv {
+    flex: 10;
+    display: flex;
+
+    max-width: 100%;
+
+    font: 1rem;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    justify-content: space-between;
+}
+
+.flexFixDiv {
+    height: 50px;
+    flex: 9;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 0 15px ;
+    border-radius: 10px;
+}
+
+.insertItemInput {
+    height: 40px;
+    width: 100%;
+
+    box-shadow: none;
+    border-radius: 5px;
+    
+    font-size: 1.2rem;
+    
+    padding: 5px 0px;
+}
+
+.insertItemInput::placeholder {
+    color: white;
+    opacity: 0.7;
+}
+
+
+.insertItemButton {
+    height: 50px;
+    width: 50px;
+
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+
+    color: white;
+    font-size: 1.5rem;
+
+    padding: 5px 5px;
+    margin-left: 5px;
+    /* margin-right: 20px; */
+
+    transition: font-size .1s ease-in-out;
+}
+
+.settingsButton {
+    height: 50px;
+    width: 50px;
+
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+
+    color: white;
+    font-size: 1.2rem;
+
+    padding: 5px 5px;
+    margin-left: 5px;
+
+    transition: font-size .1s ease-in-out;
+}
+
+.insertItemButton:active{
+    font-size: 1.2rem;
+}
+
+
+/* ---------------- */
+/* Delete Todo Item */
+/* ---------------- */
+.deleting {
+    animation: swipeOut 1.1s;
+}
+
+.fading {
+    animation: fadeOut 1s;
+}
+
+
+
+/* ------------------------- */
+/* Change Background Section */
+/* ------------------------- */
+.changeBackgroundDiv {
+    width: 60vw;
+    height: 40px;
+
+    border-radius: 10px;
+
+    position: absolute;
+    top: 50%;
+    
+    margin-left: 20vw;
+
+    background-color: rgba(0, 0, 0, 0.7);
+
+    opacity: 0;
+    pointer-events: none;
+    transition: .1s ease;
+}
+
+.bgInput {
+    height: 40px;
+    width: 98%;
+
+    padding-left: 10px;
+
+    font-size: 1.2rem;
+}
+
+.changeButton {
+    height: 40px;
+    display: block;
+
+    margin: auto;
+    margin-top: 10px;
+    padding: 5px 10px;
+    
+    border-radius: 5px;
+    
+    color: white;
+    font-size: 1rem;
+}
+
+.changeButton:hover {
+    background-color: white;
+    color: black;
+}
+
+
+/* ----------------------- */
+/* Change Password Section */
+/* ----------------------- */
+.changePasswordDiv {
+    width: 60vw;
+
+    position: absolute;
+    top: 40%;
+    margin-left: 20vw;
+
+    border-radius: 10px;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: .1s ease;
+}
+
+.flexVisibility {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+
+    margin-bottom: 10px;
+}
+
+.passwordInputs {
+    height: 40px;
+    width: 100%;
+
+    padding-left: 10px;
+
+    font-size: 1.2rem;
+}
+
+.margin {
+    margin-right: 10px;
+    margin-top: 12.5px;
+    float: right;
+    cursor: pointer;
+}
+
+
+.changePassButton {
+    height: 40px;
+    display: block;
+
+    margin: auto;
+    margin-top: 10px;
+    padding: 5px 10px;
+    
+    border-radius: 5px;
+    
+    color: white;
+    font-size: 1rem;
+}
+
+.changePassButton:hover {
+    background-color: white;
+    color: black;
+}
+
+/* ------------- */
+/* Settings Menu */
+/* ------------- */
+.clickDiv {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 150%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    pointer-events: none;
+
+    transition: .2s ease;
+}
+
+.settingsDialog {
+    position: absolute;
+    top: 50%;    
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    padding: 20px;
+    padding-bottom: 10px;
+    border-radius: 20px;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: .2s ease;
+
+}
+
+.settingsDialog a {
+    display: block;
+    
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    border: 2px solid white;
+    border-radius: 5px;
+
+    color: white;
+    text-decoration: none;
+    text-align: center;
+
+    -webkit-transition: all .1s;
+       -moz-transition: all .1s;
+        -ms-transition: all .1s;
+         -o-transition: all .1s;
+            transition: all .1s;
+}
+
+.settingsDialog a:hover {
+    color: black;
+    background-color: white;
+}
+
+.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* -------------- */
+/* Hamburger Menu */
+/* -------------- */
+.navbar {
+    position: relative;
+}
+
+.hamburgerItems a {
+    float: none;
+    display: block;
+    animation: fadeIn 0.4s;
+}
+
+.hamburgerItems {
+    margin-top: 30px;
+    display: none;
+}
+
+
+/* ------------ */
+/* Undo Section */
+/* ------------ */
+.undoButton {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    
+    margin-bottom: 90px;
+    margin-right: 50px;
+    padding: 15px 20px;
+
+    background-color: #333;
+    border-radius: 10px;
+
+    z-index: 99;
+    animation: fadeIn 1.1s;
+}
+
+/* ------------------ */
+/* Checkboxes Section */
+/* ------------------ */
+/*? This was taken from www.CSScheckbox.com` */
+label {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+    
+input[type=checkbox].css-checkbox {
+        position: absolute; 
+    overflow: hidden; 
+    clip: rect(0 0 0 0); 
+    height:1px; 
+    width:1px; 
+    margin:-1px; 
+    padding:0;
+    border:0;
+}
+
+input[type=checkbox].css-checkbox + label.css-label {
+    padding-left:20px;
+    height:15px; 
+    display:inline-block;
+    line-height:15px;
+    background-repeat:no-repeat;
+    background-position: 0 0;
+    font-size:15px;
+    vertical-align:middle;
+    cursor:pointer;
+}
+
+input[type=checkbox].css-checkbox:checked + label.css-label {
+    background-position: 0 -15px;
+}
+
+.css-label{
+    background-image:url(http://csscheckbox.com/checkboxes/dark-check-green.png);
+}
+
+.web-two-style{background-image:url(../images/icons/web-two-style-checkbox.png);}
+
+input[type=checkbox].css-checkbox.lrg + label.css-label.lrg {
+	padding-left:22px;
+    height:20px; 
+	display:inline-block;
+	line-height:20px;
+	background-repeat:no-repeat;
+	background-position: 0 0;
+	font-size:15px;
+	vertical-align:middle;
+    cursor:pointer;
+}
+
+input[type=checkbox].css-checkbox.lrg:checked + label.css-label.lrg{
+    background-position: 0 -20px;
+}
+
+
+/* ------------------ */
+/* RESPONSIVE SECTION */
+/* ------------------ */
+@media only screen and (max-width: 600px) {
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    .bgInput {
+        width: 90%;
+    }
+
+    .insertItemBottomHr {
+        width: 0;
+    }
+
+    .insertItemButton {
+        font-size: 1.4rem;
+    }
+
+    .todoDiv {
+        padding: 5px 10px;
+    }
+}

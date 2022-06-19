@@ -1,0 +1,24 @@
+p {
+    padding-left: 10px;
+}
+
+.infoDiv {
+    width: 50%;
+    color: white;
+    background-color: rgba(0,0,0,0.9);
+    margin: 100px 100px;
+}
+
+img {
+    padding: 30px 10px;
+}
+
+@media (max-width: 600px) {
+    .infoDiv {
+        width: 80%;
+        /* color: white;
+        background-color: rgba(0,0,0,0.9); */
+        margin: 20px 40px;
+        padding-bottom: 40px;
+    }
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="./static/images/icons/favicon.ico">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+    <link href="./static/css/base.css" rel="stylesheet">
+    <link href="./static/css/loginAndRegister.css" rel="stylesheet">
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <title>True Do Register</title>
+</head>
+<body>
+    <div class="scaffold">
+        <div class="animationDiv">
+
+            <h1 class="heading">REGISTER</h1>
+
+            <form onsubmit="return submitForm(event);">
+                <div class="formContainerDiv formContainerDivRegister">
+                    <div class="inputContainer m-top-20">
+                        <input type="input" name="username" class="usernameInput" placeholder="Username">
+                    </div>
+                    <div class="inputContainer m-top-20">           
+                        <input type="input" name="email" class="emailInput" placeholder="Email">
+                    </div>
+                    <div class="flex inputContainer m-top-20">
+                        <input type="password" name="password" class="passwordInput" placeholder="Password">
+                        <i class="far fa-eye" id="togglePassword"></i>
+                    </div>
+                    <div class="flex inputContainer m-top-20">
+                        <input type="password" name="confirmPassword" class="confirmPasswordInput" placeholder="Confirm Password">
+                        <i class="far fa-eye margin" id="togglePasswordConfirm"></i>
+                    </div>
+                    <div class="centerCaptchaDiv">
+                        <div class="g-recaptcha" data-sitekey="6LeraHkcAAAAADiWFEu8S3KPQfw9k9KFSHb50y-D"></div>
+                    </div>
+
+                    <button class="registerButton">REGISTER</button>
+                    <i class="fas fa-circle-notch fa-spin" id="loadingIcon"></i>
+                </div>
+            </form>
+
+            <p class="loginAndRegisterP">Already have an <span class="green">account</span>? <a href="login.html">Login!</a></p>
+        </div>
+    </div>
+
+    <div class="error"></div>
+
+    <script>
+        function submitForm(e){
+            e.preventDefault();
+            return;
+        }
+    </script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script type="module" src="./static/js/loginAndRegister.js"></script>
+</body>
+</html>

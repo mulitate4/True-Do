@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="./static/images/favicon.ico">
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+
+    <link href="./static/css/base.css" rel="stylesheet">
+    <link href="./static/css/home.css" rel="stylesheet">
+
+    <title>True Do</title>
+</head>
+
+<body>
+    <div class="titleDiv">
+        <h1 class="title">✅True Do</h1>
+        
+        <div class="buttons">
+            <a href="app.html" class="app" style="display: none;">Go to True Do</a> <br class="app-hr" style="display: none;">
+            <a href="login.html" class="login">Login</a> 
+            <a href="register.html" class="register">Register</a> <br class="register-br">
+            <a href="about.html" class="about">About</a> 
+        </div>
+    </div>
+    
+    <script type="module">
+        import {onAuthStateChanged, auth} from "./static/js/firebase.js";
+        import {$} from "./static/js/misc_functions.js";
+
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                $(".login").style.display = "none";
+                $(".register").style.display = "none";
+                $(".register-br").style.display = "none";
+                $(".app").style.display = "";
+                $(".register-br").style.display = "";
+            }
+        });
+    </script>
+
+</body>
+</html>

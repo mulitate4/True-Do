@@ -1,0 +1,76 @@
+/* ------------- */
+/* Pure Elements */
+/* ------------- */
+html {
+    height: 100%;
+    background: url("../images/backgrounds/jungle_background.jpg") no-repeat center fixed;
+    background-size: cover;
+}
+
+body {
+    background-color: transparent;
+}
+
+
+/* ----- */
+/* Title */
+/* ----- */
+.titleDiv {
+    background-color: transparent;
+    color: white;
+    font-size: 1.6rem;
+    text-align: center;
+    padding-top: 35vh;
+}
+
+
+/* ------------------ */
+/* Custom <a> Buttons */
+/* ------------------ */
+.buttons a {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    color: white;
+    font-size: 1.4rem;
+
+    margin-top: 30px;
+    margin-right: 10px;
+
+    width: fit-content;
+    background: transparent;
+
+    padding: 7.5px 15px;
+
+    border: 2px solid white;
+    border-radius: 5px;
+
+    transition: all .3s;
+}
+
+.buttons a:hover {
+    background: white;
+    color: black;
+}
+
+.buttons .login {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.buttons .app {
+    padding: 10px 20px;
+}
+
+.buttons .about {
+    margin-top: 15px;
+}
+
+/* ------------ */
+/* No Scrollbar */
+/* ------------ */
+::-webkit-scrollbar {
+    display: none;
+}
