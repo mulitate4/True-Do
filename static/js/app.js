@@ -89,7 +89,7 @@ onAuthStateChanged(auth, async (user) => {
             new TodoItem(todo["label"], todo["id"]);
         }
     } else {
-        redirect("home.html")
+        redirect("login")
     }
 });
 
@@ -371,5 +371,5 @@ AEL(clickDiv, "click", async ()=>{hideAllSettings()})
 // ------ //
 AEL(logoutButton, "click", async ()=>{
     await logOut();
-    redirect("home.html");
+    redirect("home");
 })

@@ -20,5 +20,8 @@ def register():
     return render_template("register.html")
     
 @app.route('/app')
-def app():
+def todo_app():
     return render_template("app.html")   
+
+if __name__ == '__main__':
+    app.run(debug=True)

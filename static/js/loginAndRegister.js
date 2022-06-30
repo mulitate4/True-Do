@@ -32,12 +32,11 @@ let loadingIcon = $("#loadingIcon");
 
 loadingIcon.style.display = "none";
 
-
 // ----------
 // User Check
 // ----------
 onAuthStateChanged(auth, async (user) => {
-    if (user) redirect("app.html");
+    if (user) redirect("app");
 });
 
 // -----
@@ -62,10 +61,10 @@ async function login() {
     }
 
     loadingIcon.style.display = "none";
-    redirect("app.html");
+    redirect("app");
 }
 
-if (window.location.pathname == "/login.html")
+if (window.location.pathname == "/login")
     AEL(loginButton, "click", ()=>{ login();
         console.log("ok");
     });
@@ -141,10 +140,10 @@ async function register() {
     }
     let profile = await createUserProfile(user, data.username);
 
-    redirect("app.html");
+    redirect("app");
 }
 
-if (window.location.pathname == "/register.html") 
+if (window.location.pathname == "/register") 
     AEL(registerButton, "click", ()=>{register();});
 
 
@@ -178,9 +177,9 @@ AEL(passwordConfirmReveal, 'click',
 AEL(document, "keypress", 
     function (e) {
         if (e.key == "Enter") {
-            if (window.location.pathname == "/login.html")
+            if (window.location.pathname == "/login")
             login();
-            else if (window.location.pathname == "/register.html")
+            else if (window.location.pathname == "/register")
             register();
         }
     }
